@@ -15,7 +15,8 @@ requests
     sever.bind((host,port))
 ```
 
-```def getPX():        //按照我的格式返回ip和port
+``` 
+    def getPX():        //按照我的格式返回ip和port，每次请求都会根据这个函数更改新的ip
     p = requests.get("http://127.0.0.1:5010/get/").json().get("proxy")
     p = str(p)
     ip = str(p.split(":")[0])
